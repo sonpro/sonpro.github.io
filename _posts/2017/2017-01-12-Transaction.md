@@ -44,7 +44,8 @@ tags:
 create table t ROWDEPENDENCIES nologging as select * from scott.emp;
 ```
 
-기본값은 norowdependencies 이며 이는 블록 단위로 기록한다. 이는 기본값으로 설정되어 있을때는 한 블록 내에서 레코드 하나만 변경하고 커밋하더라도 블록 내 모든 레코드의 ora_rowscn이 변경된다
+기본값은 norowdependencies 이며 이는 블록 단위로 기록한다.
+이는 기본값으로 설정되어 있을때는 한 블록 내에서 레코드 하나만 변경하고 커밋하더라도 블록 내 모든 레코드의 ora_rowscn이 변경된다
 
 -	ora_rowscn은 영구히 저장되는 값이지만 이는 시간정보로 변환하는 데는 정해진 기한이 있다. SMON 프로세스는 내부적으로 SCN과 Timestamp간 매핑정보를 관리, 오라클은 이 매핑 정보(sys.smon_scn_time테이블)를 이용 scn_to_timestamp 함수를 구현했다. 그러나 이 매핑 테이블의 보관 주기는 5일 이다. 이 시간이 지나면 매핑값을 찾을 수 없기에 오류(ORA-08181)를 발생한다. ORA-08181 Invalid system change number specified. 단순히 동시성 제어를 위해서만 사용하면 ora_rowscn을 활용하는 것이 효과적이다. 그러나 변경 일시 정보를 다른 용도로 사용할 것이라면 기존 방식대로 구현해야 한다.
 
