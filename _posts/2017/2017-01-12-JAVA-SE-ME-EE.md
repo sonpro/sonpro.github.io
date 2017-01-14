@@ -1,6 +1,8 @@
 ---
 layout : post
 title : JAVA SE, ME ,EE
+categories : java
+tags : java
 ---
 
 #### **JAVA SE(Java Platform Standard Edition)**

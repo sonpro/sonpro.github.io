@@ -1,6 +1,8 @@
 ---
 layout : post
 titile : BigDecimal을 사용해야하는 이유
+categories : java
+tags : java, techtips
 ---
 
 
@@ -117,7 +119,9 @@ BigDecimal을 사용하도록 프로그램을 변환하기 전에 그 생성 방
 
 값을 생성한 후 숫자의 단위와 라운딩 모드를 setScale()을 사용하여 명시적으로 설정할 수 있다. Java 플랫폼의 다른 Number 하위 클래스와 마찬가지로, BigDecimal은 변경할 수 없다. 따라서 setScale()을 호출할 경우 반환 값을 "저장"해야 한다.
 
+ ```java
  d = d.setScale(2, RoundingMode.HALF_UP);
+ ```
 
 
 BigDecimal을 사용하여 수정된 프로그램은 다음과 같다. 계산마다 또 다른 BigDecimal을 사용하고 그 단위를 설정해야 달러 및 센트에 대한 수학 연산이 수행된다. 분할 페니를 사용하려는 경우 단위에서 3개의 소수 자리로 갈 수도 있지만, 꼭 그럴 필요는 없다.
@@ -153,12 +157,13 @@ public class Calc2 {
 
 이제 프로그램을 실행하면 훨씬 나은 계산이 수행된다.
 
-**
-Subtotal : 100.05
+
+>Subtotal : 100.05
 Discount : 10.01
 Total : 90.04
 Tax : 4.50
 Tax+Total: 94.54
-**
+
+
 
 BigDecimal은 이 예제에서 보여준 것보다 더 다양한 기능을 제공한다. 정수를 사용하는데 무한대의 정밀도가 필요한 경우를 위한 BigInteger 클래스도 있다. 두 클래스에 대한 Java 플랫폼 설명서에서는 단위, MathContext 클래스, 정렬 및 동등(equality)에 대한 정보를 비롯하여 이 클래스와 관련된 자세한 내용을 확인할 수 있다.

@@ -1,7 +1,9 @@
 ---
-layout : post
-title : Finance System Achitecture
-tags : Achitecture Finance
+layout: post
+title: Finance System Achitecture
+tags: Achitecture Finance
+categories:
+  - architecture
 ---
 
 금융시스템은 계정계(Account System), 정보계(Information) 등 Core Banking System 과 Channel 이 분리되어 있어서 네트워크 구조가 복잡하다
