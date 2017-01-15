@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sonpro.github.io" # the base hostname & protocol for your site
 twitter_username: isonpro
 github_username:  isonpro
-disqus_comment_username: disqus_Wllpk1XXmA
+disqus_comment_username: isonpro
 disqus_domain: "https://sonpro.github.io" # fixed
 excerpt_separator: <!--more-->
 encoding: utf-8
