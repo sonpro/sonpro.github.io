@@ -4,6 +4,7 @@ title: "OracleNullData"
 date: "2017-01-15 09:42"
 categories : db
 tags : oracle, NullData
+comments : true
 ---
 
 
