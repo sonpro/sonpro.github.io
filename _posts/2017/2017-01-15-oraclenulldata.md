@@ -6,6 +6,7 @@ categories : db
 tags : oracle, NullData
 ---
 
+
 ### Null Data
 
 어떤 값인지는 알 수 없지만 공간을 점유하고 있는 데이터
