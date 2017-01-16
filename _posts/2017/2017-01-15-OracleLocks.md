@@ -2,7 +2,7 @@
 layout : post
 title : oracle lock의 종류
 categories : db
-tags : lock, oracle
+tags : lock oracle
 
 ---
 

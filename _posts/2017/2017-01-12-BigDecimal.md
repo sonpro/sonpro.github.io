@@ -2,7 +2,7 @@
 layout : post
 titile : BigDecimal을 사용해야하는 이유
 categories : java
-tags : java, techtips
+tags : java bigdecimal
 ---
 
 

@@ -2,7 +2,7 @@
 layout : post
 title : Mybatis에서 NumberFormatException
 categories : db
-tags : oracle,mybatis, NumberFormatException
+tags : oracle mybatis NumberFormatException
 
 ---
 

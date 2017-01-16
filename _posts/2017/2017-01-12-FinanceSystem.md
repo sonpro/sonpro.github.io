@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Finance System Achitecture
-tags: Achitecture Finance
+tags: Architecture Finance
 categories:
   - architecture
 ---

@@ -3,7 +3,7 @@ layout : post
 comments : true
 title : string format util
 categories : java
-tags : java, string
+tags : java string
 ---
 
 ### String.format 형식
