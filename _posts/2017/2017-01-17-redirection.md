@@ -6,7 +6,7 @@ categories : tips
 tags : Redirection pipe
 ---
 
-#### Redirection
+# Redirection
 
 데이터 입출력 방향을 바꾸어 주는 것
 
@@ -24,7 +24,7 @@ sort < test.txt
 
 
 
-#### Piping
+# Piping
 
 복수의 명령어들을 서로 결합시키는 것
 

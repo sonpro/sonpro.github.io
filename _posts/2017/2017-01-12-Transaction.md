@@ -7,16 +7,16 @@ tags:
   - oracle
 ---
 
-#### 동시성 제어가 어려운 이유
+# 동시성 제어가 어려운 이유
 
 동시성(Concurrency)과 일관성(Consistency)은 트레이드오프(Trade-off)관계에 있다. 도시성을 높이려고 Lock의 사용을 최소화하면 읽기 일관성을 유지하기 어렵고, 데이터 일관성을 높이기 위해 Lock을 많이 사용하면 동시성이 떨어진다
 
-#### Dirty Read
+## Dirty Read
 
 커밋되지 않은 수정 중인 데이터를 달느 트랜잭션에서 읽을 수 있도록 허용할때 발생 갱신중인 레코드는 배타적 Lock 이 걸림, 이는 공유 Lock과 호환되지 않아 갱신중인 레코드는 읽지 못함
 
 
-#### 비관적 동시성 제어]
+## 비관적 동시성 제어
 nowait 옵션을 함께 사용하면 Lock을 얻기위해 무한정 기다리지 않아도 된다
 -	wait 또는 nowait 옵션을 이용하면 다른 트랜잭션에 의해 Lock이 걸렸을 때 Exception을 만나게 되므로 alert을 출력하고 트랜잭션을 종료할 수 있다
 -	select for update skip locked 라는 기존 locking 범위를 skip하는 옵션도 9i부터 지원되는 undocumented된 방법이며 과거부터 AQ(Advanced Queuing) 기능을 위해 존재했던 기능이기도 하다
@@ -26,7 +26,7 @@ nowait 옵션을 함께 사용하면 Lock을 얻기위해 무한정 기다리지
 **for update wait 3** : 3초 대기 후 Exception(ORA-30006)을 던짐
 
 
-#### 낙관적 동시성 제어
+## 낙관적 동시성 제어
 
 낙관적 동시성 제어는 (Optimistic Concurrency Control) 는 사용자들이 같은 데이터를 동시에 수정하지 않을 것이라고 가정한다. 읽는 시점에는 Lock을 사용하지 않지만 데이터를 수정하고자 하는 시점에 앞서 읽은 데이터가 다른 사용자에의한 변경여부를 반드시 확인해야 한다. 낙관적 동시성 제어를 사용하면 Lock이 유지된느 시간이 매우 짧아져서 동시성을 높이는데 유리하다. 낙관적 동시성 제어에도 update 전에 for update nowait문을 select절고 함께 한번 더 수행하면 다른 트랜잭션에 의해 설정된 Lock에 의한 동시성 저하를 예방할 수 있다.
 

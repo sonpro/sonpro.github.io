@@ -5,9 +5,9 @@ categories : db
 tags : oracle mybatis NumberFormatException
 
 ---
+# Mybatis에서 NumberFormatException 발생하는 경우 
 
-
-**java**
+## JAVA
 
 
 ```sql
@@ -16,7 +16,7 @@ sampleDao.select("sql",item);
 ```
 
 
-**sqlmapper.xml**
+## sqlmapper.xml
 
 
 ```xml

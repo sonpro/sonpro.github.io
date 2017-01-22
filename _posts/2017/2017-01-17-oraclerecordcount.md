@@ -6,6 +6,8 @@ categories : db
 tags : oracle count
 ---
 
+## 오라클에서 테이블별 레코드수 count 조회
+
 ```sql
 SELECT table_name
           , num_rows -- 통계정보 건수

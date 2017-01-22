@@ -6,7 +6,7 @@ categories : java
 tags : java string
 ---
 
-### String.format 형식
+## String.format 형식
 
 ```java
 String str = String.format("p1:[%s],p2:[%10s]", "arg1","arg2").replace(" ", "_");
@@ -24,7 +24,7 @@ arg값을 format 형식에 맞게 바인딩하여 출력
 | %-5s | 숫자 길이만큼 문자열 우측에 공백을 채운다 |
 | %.2s | 점오른쪽 숫자만큼 문자열을 자른 후 출력   |
 
-### String Left Padding util
+## String Left Padding util
 
 **ex) 문자열 좌측에 0을 채운다**
 

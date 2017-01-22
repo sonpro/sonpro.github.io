@@ -8,7 +8,7 @@ comments : true
 ---
 
 
-### Null Data
+# Null Data
 
 어떤 값인지는 알 수 없지만 공간을 점유하고 있는 데이터
 값 자체의 정확한 수치를 나타낼 수는 없지만 상위 개념에서 null data 라 칭함
