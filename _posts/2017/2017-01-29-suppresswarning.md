@@ -13,7 +13,7 @@ tags : spring annotation
 ## Options
 
 | Option | Description |
-|:--:|:--:|
+|:--:|:--|
 | all | 모든 경고를 억제 |
 |cast | 캐스트 연산자 관련 경고 억제 |
 | dep-ann | 사용하지 말아야 할 주석 관련 경고 억제 |
