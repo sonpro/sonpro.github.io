@@ -242,7 +242,7 @@ pre {
     &:after {
         content: "";
         display: table;
-        // clear: both;
+        clear: both;
     }
 }
 
@@ -263,4 +263,14 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+table {
+    margin: 10px 0px 15px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: keep-all;
 }
