@@ -1,13 +1,13 @@
 ---
 layout: "post"
-title: "SpringConfiguration"
+title: "@Configuration"
 date: "2017-04-02 23:11"
 tags : spring
 categories : java
 ---
 
 
-# Spring 환경설정
+# @Configuration
 
 ## Spring 3.x 에서 @configuration annotation 사용할 경우 문제
 
