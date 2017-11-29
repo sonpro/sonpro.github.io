@@ -3,7 +3,7 @@ layout: "post"
 title: "javascript groupby"
 date: "2017-11-30 00:39"
 categories : javascript
-tag:groupby
+tags : groupby
 ---
 
 
@@ -51,6 +51,6 @@ var data = [
 
 ```
 
->참고 
+> 참고
 > [wikipedia : underscore.js](https://en.wikipedia.org/wiki/Underscore.js)
 > [blog : underscore](http://seoh.blog/2012/10/09/getting-cozy-with-underscore-js/)

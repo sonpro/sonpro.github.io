@@ -2,7 +2,7 @@
 layout: "post"
 title: "Access specifier in JAVA "
 date: "2017-08-30 23:10"
-categories : JAVA
+categories : java
 tags : AccessSpecifier
 ---
 
