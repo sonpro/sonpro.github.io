@@ -9,8 +9,7 @@ twitter_username: isonpro
 github_username:  sonpro
 disqus_shortname: sonpro
 disqus_comment_username: sonpro
-disqus_domain: "https://sonpro.github.io" # fixed
-excerpt_separator: <!--more-->
+gexcerpt_separator: <!--more-->
 encoding: utf-8
 
 
@@ -31,10 +30,11 @@ kramdown:
   # span, block element options fall back to global
   syntax_highlighter_opts:
     # Rouge Options › https://github.com/jneen/rouge#full-options
-    #css_class: 'highlight'
+    default_lang : java
+    css_class: 'highlight'
     #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
-    #span:
-    #  line_numbers: false
+    span:
+      line_numbers: false
     block:
       line_numbers: true
       start_line: 1
