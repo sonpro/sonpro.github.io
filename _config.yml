@@ -16,8 +16,9 @@ markdown: kramdown
 
 kramdown :
   input: GFM
- syntax_highlighter_opts: rouge
- # linenos : true
+  syntax_highlighter : rouge
+# linenos : true
+ syntax_highlighter_opts:
   # Rouge Options › https://github.com/jneen/rouge#full-options
   default_lang : java
   css_class: 'highlight'
