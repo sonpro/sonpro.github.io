@@ -29,7 +29,7 @@ theme_settings:
   facebook:
   flickr:
   gitlab:
-  github: "isonpro"
+  github: "sonpro"
   google_plus:
   instagram:
   keybase:
@@ -47,7 +47,7 @@ theme_settings:
 
   # Scripts / Features
   google_analytics: "UA-56335619-2"
-  disqus_shortname: isonpro
+  disqus_shortname: "sonpro"
   katex: true # Enable if using math markup
   portfolio: false
   search: true
