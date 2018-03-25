@@ -1,59 +1,22 @@
-encoding: utf-8
 # Site settings
-title: Sonpro Blog
-motto: 기록하는 공간
-description: "생각하는 연습, 글쓰는 연습, 표현하는 연습."
-url: "http://sonpro.github.io" # the base hostname & protocol for your site
-baseurl: ""
-paginate_path: "blog/page:num/"
-#permalink: blog/:title/
-permalink: /:categories/:title.html
+title: SONPRO
+email: isonpro@gmail.com
+description: 기록하는공간
+# > # this means to ignore newlines until "baseurl:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
 
-
+# baseurl: "" # the subpath of your site, e.g. /blog/
+# url: "http://yourdomain.com" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+github_username:  isonpro
+permalink: /:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
-# !github-pages! mandatory › https://help.github.com/articles/using-jekyll-with-pages/#configuration-settings-you-cannot-change
-# Since Jekyll 3 the default highlighter is Rouge (replaced Pygments.rb in v44)
-#highlighter: rouge
 
-# More › http://kramdown.gettalong.org/quickref.html
-# Options › http://kramdown.gettalong.org/options.html
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  #linenos: true
-  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
-  # span, block element options fall back to global
-  syntax_highlighter_opts:
-    # Rouge Options › https://github.com/jneen/rouge#full-options
-    default_lang : java
-    css_class: 'highlight'
-    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-
-
-
-gems: [jekyll-paginate]
-paginate: 10
-
-navigation:
- - title: Home
-   url: /index.html
- - title: About
-   url: /about
- - title: Contact
-   url: /contact
-
-social:
-   github: isonpro
-   facebook: isonpro
-   email: isonpro@gmail.com
-
-google_analytics: "UA-56335619-2"
+# highlight
+# highlighter: pygments
+# highlighter: rouge
+# highlighter: false
