@@ -1,15 +1,13 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "type-on-strap"
-  spec.version       = "0.4.2"
-  spec.authors       = ["Sylhare","Rohan Chandra"]
-  spec.email         = ["sylhare@outlook.com", "hellorohan@outlook.com"]
+  spec.name          = "sonpro"
+  spec.version       = "0.1.1"
+  spec.email         = ["isonpro@gmail.com"]
 
   spec.summary       =  "A simple and responsive jekyll theme template"
-  spec.description   = %q{A custom Type Theme template (a free and open-source Jekyll theme). Great for blogs, easy to customize and responsive.}
+  spec.description   = %q{say something..}
   spec.homepage      = "https://github.com/sylhare/Type-on-Strap"
-  spec.license       = "MIT"
 
   spec.files         = Dir.glob("**/{*,.*}").select do |f|
     f.match(%r{^(assets/(js|css|fonts)|_(includes|layouts|sass)/|(LICENSE|README.md))}i)
