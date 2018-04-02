@@ -2,12 +2,13 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "sonpro"
-  spec.version       = "0.1.1"
+  spec.version       = "0.4.2"
+  spec.authors       = ["SonPro"]
   spec.email         = ["isonpro@gmail.com"]
 
   spec.summary       =  "A simple and responsive jekyll theme template"
   spec.description   = %q{say something..}
-  spec.homepage      = "https://github.com/sylhare/Type-on-Strap"
+  spec.homepage      = "https://github.com/sonpro"
 
   spec.files         = Dir.glob("**/{*,.*}").select do |f|
     f.match(%r{^(assets/(js|css|fonts)|_(includes|layouts|sass)/|(LICENSE|README.md))}i)
