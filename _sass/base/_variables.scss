@@ -1,8 +1,9 @@
 // Typography
 // $font-family-main: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$font-family-main: 'KoPub Batang', Helvetica, Arial, sans-serif;
+// $font-family-main: 'KoPub Batang', Helvetica, Arial, sans-serif;
+$font-family-main: 'Noto Sans KR','Ubuntu Mono';
 // $font-family-headings: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$font-family-headings:  'KoPub Batang', Helvetica, Arial, sans-serif;
+$font-family-headings:  'Noto Sans KR','Ubuntu Mono';
 $font-size: 17px;
 
 
@@ -36,7 +37,8 @@ $navbar-separator-opacity: 0;
 $feature-image-text-color: #fff;
 $feature-image-size: cover; // options include "cover", "contain", "auto"
 // Header description box
-$header-desc-background-color: #507492;
+// $header-desc-background-color: #507492;
+$header-desc-background-color: #ffffff;
 $header-desc-text-color: #FFF;
 
 // Mobile display

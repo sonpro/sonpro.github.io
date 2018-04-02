@@ -2,6 +2,10 @@ h1.title {
     @extend .header-txt-shadow;
     color : #000000;
 }
+h1.menu-title {
+    @extend .header-txt-shadow;
+    color : #ffffff;
+}
 
 .subtitle {
     font-weight: normal;

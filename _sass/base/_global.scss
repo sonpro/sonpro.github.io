@@ -54,7 +54,7 @@ h1 {
 
 h2 {
     font-size: 1.8em;
-    color : #333;
+    // color : #333;
 }
 
 h3 {
@@ -70,7 +70,7 @@ h4 {
 blockquote {
     border-left: 2px solid darken($blockquote-color, 20%);
     margin: 1em 1em;
-    padding: 0.35em 1em;
+    padding: 0.3d5em 1em;
     background-color: $blockquote-color;
     box-shadow: 0 2px 2px $border-color;
 }
