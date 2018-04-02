@@ -53,7 +53,8 @@ a.button {
 .post-link {
     &:hover {
         text-decoration: none;
-        color: lighten($link-color, 10%);
+        // color: lighten($link-color, 10%);
+        color: #333;
     }
 }
 
