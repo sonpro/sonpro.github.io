@@ -54,7 +54,7 @@ a.button {
     &:hover {
         text-decoration: none;
         // color: lighten($link-color, 10%);
-        color: #333;
+        color: lighten(#333, 10%);
     }
 }
 
