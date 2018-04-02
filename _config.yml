@@ -1,24 +1,24 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "https://sylhare.github.io"
-title: 窮卽變 變卽通 通卽久 # site's title
+url: "https://sonprol.github.io"
+title: Do more. # site's title
 description: "A website with blog posts and pages" # used by search engines
 
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: SONPRO # blog's title
+  title: Welcome! # blog's title
   avatar: assets/img/triangle.svg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <p>窮卽變 變卽通 通卽久<br>궁즉변 변즉통 통즉구</p>
+     <p>Sonpro's Blog</p>
   header_text_feature_image: assets/img/pexels/triangular.jpeg
   footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+#   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout

@@ -51,35 +51,54 @@ tags : lock oracle
 
 유저가 `insert, delete, update, select..from FOR UPDATE OF` 문장을 실행하면, 변경되는 ROW에 대한 ROW LOCK과 TABLE에 대한 TABLE LOCK이 생긴다
 
-**ROW LOCK(TX)** : `insert into...value...;` , `delete from... where ...`,`update...set...where...for update of...` sql 문장에서 where 조건에 해당되는 row에 대하여 다른 유저들이 변경할 수 없도록 EXCLUSIVE LOCK 이 생긴다. TX LOCK이 걸린 ROW는 DML문장을 실행한 유저가 commit이나 rollback을 할 때 까지 걸리므로 다른 유저들이 변경할 수 없다.
+**ROW LOCK(TX)**
 
-**TABLE LOCK(TM)** : TX LOCK이 걸린 ROW가 저장된 TABLE에 대한 LOCK이다.DML SQL문장을 수행하는 중에, 해당 테이블이 ALTER나 DROP되는 것을 방지하기 위해서 TM LOCK을 사용한다. 또 TM LOCK에는 RS(ROW SHARE), RX(ROW EXCLUSIVE), S(SHARE), SRX(SHARE ROW EXCLUSIVE), X(EXCLUSIVE) 가 있다. 이런 TABLE LOCK MODE는 같은 테이블에서 실행 할 수 있는 SQL문장과 실행할 수 없는 SQL문장을 구분하기 위해서다. 예를 들어서 한 유저가 사원 테이블을 UPDATE할때, 다른 유저가 사원 테이블을 DROP하려고 한다고 가정하자
+ `insert into...value...;` , `delete from... where ...`,`update...set...where...for update of...` sql 문장에서 where 조건에 해당되는 row에 대하여 다른 유저들이 변경할 수 없도록 EXCLUSIVE LOCK 이 생긴다. TX LOCK이 걸린 ROW는 DML문장을 실행한 유저가 commit이나 rollback을 할 때 까지 걸리므로 다른 유저들이 변경할 수 없다.
+
+**TABLE LOCK(TM)**
+
+ TX LOCK이 걸린 ROW가 저장된 TABLE에 대한 LOCK이다.DML SQL문장을 수행하는 중에, 해당 테이블이 ALTER나 DROP되는 것을 방지하기 위해서 TM LOCK을 사용한다. 또 TM LOCK에는 RS(ROW SHARE), RX(ROW EXCLUSIVE), S(SHARE), SRX(SHARE ROW EXCLUSIVE), X(EXCLUSIVE) 가 있다. 이런 TABLE LOCK MODE는 같은 테이블에서 실행 할 수 있는 SQL문장과 실행할 수 없는 SQL문장을 구분하기 위해서다. 예를 들어서 한 유저가 사원 테이블을 UPDATE할때, 다른 유저가 사원 테이블을 DROP하려고 한다고 가정하자
 
 ## TABLE LOCK MODE
 
-**RS(ROW SHARE LOCK)** `SELECT ... FROM ... WHERE ... FOR UPDATE OF ...;` 이나 `LOCK TABLE ... IN ROW SHARE MODE;` 명령에 의해 해당 테이블에는 RS LOCK 이 생긴다. RS LOCK이 걸린 테이블에는 RS, RX, S, SRX LOCK 을 걸 수 있고, X LOCK은 걸 수 없다. 단, SELECT ... FROM ... FOR UPDATE OF 명령에 의해 WHERE 조건에 걸린 ROW에 대해서는 TX LOCK이 생기므로 이 ROW에 대해서 UPDATE, DELETE, 를 실행할때는 테이블에 대해서는 RX LOCK이 생기므로 에러는 안나지만, COMMIT 이나 ROLLBACK 할때까지 WAITING을 한다. SELECT ... FOR UPDATE OF; 문장은 테이블에는 RS LOCK 이므로 에러는 안나지만, ROW에 대해서는 TX LOCK 이 걸리므로 WAITING한다.
+**RS(ROW SHARE LOCK)**
 
-**RX(ROW EXCLUSIVE LOCK)**`UPDATE...; INSERT INTO....; DELETE FROM...;` 이나 `lock...in row exclusive mode;` 명령에 의해 테이블에 걸리는 LOCK이다. RX LOCK도 RS LOCK과 비슷한 내용이고, 단지 S,SRX,X LOCK을 걸 수 없다.
+`SELECT ... FROM ... WHERE ... FOR UPDATE OF ...;` 이나 `LOCK TABLE ... IN ROW SHARE MODE;` 명령에 의해 해당 테이블에는 RS LOCK 이 생긴다. RS LOCK이 걸린 테이블에는 RS, RX, S, SRX LOCK 을 걸 수 있고, X LOCK은 걸 수 없다. 단, SELECT ... FROM ... FOR UPDATE OF 명령에 의해 WHERE 조건에 걸린 ROW에 대해서는 TX LOCK이 생기므로 이 ROW에 대해서 UPDATE, DELETE, 를 실행할때는 테이블에 대해서는 RX LOCK이 생기므로 에러는 안나지만, COMMIT 이나 ROLLBACK 할때까지 WAITING을 한다. SELECT ... FOR UPDATE OF; 문장은 테이블에는 RS LOCK 이므로 에러는 안나지만, ROW에 대해서는 TX LOCK 이 걸리므로 WAITING한다.
 
-**S(SHARE LOCK)**`lock...in share mode;` 에 의해 테이블에 생긴 lock 이다. s lock은 같은 테이블에 대해서 RS,S LOCK 만 가능하고, RX, SRX, X LOCK을 걸 수는 없다.
+**RX(ROW EXCLUSIVE LOCK)**
+
+`UPDATE...; INSERT INTO....; DELETE FROM...;` 이나 `lock...in row exclusive mode;` 명령에 의해 테이블에 걸리는 LOCK이다. RX LOCK도 RS LOCK과 비슷한 내용이고, 단지 S,SRX,X LOCK을 걸 수 없다.
+
+**S(SHARE LOCK)**
+
+`lock...in share mode;` 에 의해 테이블에 생긴 lock 이다. s lock은 같은 테이블에 대해서 RS,S LOCK 만 가능하고, RX, SRX, X LOCK을 걸 수는 없다.
 
 ```sql
 sql> lock table emp in share mode;
 --사원 테이블에는 insert update, delete  할 수 없다
 ```
 
-**SRX(SHARE ROW EXCLUSIVE)**`LOCK TABLE ... IN SAHRE ROW EXCLUSIVE MODE;` 에 의해 테이블에 생긴 lock이다 SRX LOCK은 같은 테이블에 대해서 RS LOCK만 가능하고 RX, SRX,S, X LOCK을 걸 수 없다
+**SRX(SHARE ROW EXCLUSIVE)**
+
+`LOCK TABLE ... IN SAHRE ROW EXCLUSIVE MODE;` 에 의해 테이블에 생긴 lock이다 SRX LOCK은 같은 테이블에 대해서 RS LOCK만 가능하고 RX, SRX,S, X LOCK을 걸 수 없다
 
 ```sql
 SQL> LOCK TABLE 사원 IN SHARE ROW EXCLUSIVE MODE;`
 --사원 테이블에 select... for update of; 는 가능하지만 insert, delete, update는 할 수 없다
 ```
 
-**X(EXCLUSIVE)**`lock table... in EXCLUSIVE mode;` 에 의해 테이블에 생긴 lock이다 x lock은 같은 테이블에선느 어떠한 lock도 걸 수 없다. 즉, drop table...; alter table...; 등의 DDL문장에 의해 테이블에 생기는 lock이다.
+**X(EXCLUSIVE)**
+
+`lock table... in EXCLUSIVE mode;` 에 의해 테이블에 생긴 lock이다 x lock은 같은 테이블에선느 어떠한 lock도 걸 수 없다. 즉, drop table...; alter table...; 등의 DDL문장에 의해 테이블에 생기는 lock이다.
 
 ![sql locks](http://i.imgur.com/KCX2Axk.png)
 
-**S** : 테이블 전체에 락을 건다. index 해결책**SRX** : DML금지 S락도 금지 index 해결책**RS** : row share**RX : row exclusive**S\** : share**SRX** : share row exclusive**X** : exclusive
+**S** : 테이블 전체에 락을 건다. index 해결책
+**SRX** : DML금지 S락도 금지 index 해결책
+**RS** : row share**RX : row exclusive
+**S\** : share
+**SRX** : share row exclusive
+**X** : exclusive
 
 ## Data Dictionary lock
 
