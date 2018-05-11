@@ -2,12 +2,9 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "assets/img/pexels/desk-nerd.jpeg"
-tags: [About, Test]
+feature-img: "assets/img/pexels/book-glass.jpeg"
+tags: [About, blog]
 ---
 
-Type on Strap is based on Type Theme, a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
-
-Head over to the [theme's documentation](https://github.io/sylhare/Type-on-Strap) for much more information about Type on Strap or to install this theme on your own Jekyll site.
-
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+### 이 블로그는
+제가 개인적으로 공부를 하거나 업무를 보면서 부족한 지식을 채우고 심리적 위기감을 덜고자 작성하고 있습니다.
