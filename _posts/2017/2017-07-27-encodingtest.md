@@ -3,7 +3,7 @@ layout: "post"
 title: "EncodingTest"
 date: "2017-07-27 00:08"
 categories: java
-tags: encoding, euc-kr
+tags: encoding euc-kr
 ---
 # Java Encoding Test
 ## 현황 및 문제점
