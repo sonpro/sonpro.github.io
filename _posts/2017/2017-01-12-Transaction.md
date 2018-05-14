@@ -1,10 +1,7 @@
 ---
 layout: post
-categories:
-  - db
-tags:
-  - db
-  - oracle
+categories:  db
+tags: db oracle
 ---
 
 # 동시성 제어가 어려운 이유

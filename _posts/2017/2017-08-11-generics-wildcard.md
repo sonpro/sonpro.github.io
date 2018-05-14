@@ -3,7 +3,7 @@ layout: "post"
 title: "Generics - WildCard"
 date: "2017-08-11 04:07"
 categories : java
-tags : generics, WildCard
+tags : generics WildCard
 ---
 
 

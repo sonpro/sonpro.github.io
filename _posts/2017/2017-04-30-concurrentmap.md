@@ -3,7 +3,7 @@ layout: "post"
 title: "concurrenthashmap"
 date: "2017-04-30 12:54"
 categories : java
-tags : map,thread, concurrenthashmap, hashmap, shashtable
+tags : map thread concurrenthashmap hashmap shashtable
 ---
 
 # Hashtable, HashMap, concurrenthashmap

@@ -3,7 +3,7 @@ layout: "post"
 title: "FactoryPattern"
 date: "2017-05-02 00:38"
 categories : java
-tags : designpattern, FactoryPattern
+tags : designpattern FactoryPattern
 
 ---
 
