@@ -13,7 +13,7 @@ layout: default
 
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <span class="post-meta">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-        <span class="post-meta disqus-comment-count" 
+        <span class="post-meta disqus-comment-count"
           {% if post.identifier.size > 0 %} data-disqus-identifier="{{ post.identifier }}" {% endif %}
           data-disqus-url="{{ site.disqus_domain }}{{ post.url | prepend: site.baseurl }}">0 Comments</span>
 
@@ -69,12 +69,3 @@ layout: default
   </div>
 
 </div>
-
-
-
-
-
-
-
-
-
