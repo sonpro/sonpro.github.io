@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 <div class="well">
 {% capture tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag = tags | split:',' | sort %}
@@ -16,4 +17,3 @@ layout: default
 {% endunless %}{% endfor %}
 <br/><br/>
 </div>
-
