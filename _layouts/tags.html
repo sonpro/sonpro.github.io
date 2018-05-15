@@ -2,6 +2,7 @@
 layout: page
 ---
 
+
 <div class="home">
 
 <!-- cycles through posts to get tags -->
@@ -11,12 +12,6 @@ layout: page
 {% assign rawtags = rawtags | append:post_tags %}
 {% endfor %}
 
-<!-- cycles through portfolio collection to get tags -->
-{% assign portfolio =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq %}
-{% for tag in portfolio %}
-{% assign portfolio_tags = tag | join:'|' | append:'|' %}
-{% assign rawtags = rawtags | append:portfolio_tags %}
-{% endfor %}
 
 <!-- cycles through pages to get tags -->
 {% for page in site.pages %}
@@ -72,7 +67,7 @@ layout: page
             {% endfor %}
 
             <!-- Portfolio -->
-            
+
         </div>
         {% endfor %}
 
