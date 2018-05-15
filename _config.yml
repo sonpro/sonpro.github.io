@@ -53,7 +53,7 @@ theme_settings:
   disqus_shortname: "sonpro"
   katex: true # Enable if using math markup
   portfolio: false
-  categories: false
+  categories: true
   search: true
   tags: true
 
