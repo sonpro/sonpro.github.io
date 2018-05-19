@@ -10,13 +10,13 @@ theme_settings:
   # Meta
   title: Welcome! # blog's title
   # avatar: assets/img/triangle.svg
-  avatar: assets/img/circle_son.gif
+  avatar: assets/img/CircleD_LOGO_web.png
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <p>Sonpro's Blog</p>
+     <p>Jobs are not important.</p>
   # header_text_feature_image: assets/img/pexels/desk-open.jpeg
   # header_text_feature_image: assets/img/pexels/intro.png
   header_text_feature_image: assets/img/pexels/A4-Notebook-Pen-4.jpg
