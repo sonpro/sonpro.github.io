@@ -29,7 +29,8 @@ python setup.py install
 
 ### pip에서 다운로드
 pip(python package manager)를 통하여 실행
-```Python
+
+```python
 pip3 install bs4
 ```
 
