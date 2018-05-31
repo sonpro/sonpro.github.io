@@ -8,6 +8,9 @@ layout: default
     {{ page.date | date: "%B %-d, %Y" }}
     {% if page.author %} - {{ page.author }}{% endif %}
     </p>
+
+    {% include advertising.html %}
+    
   </header>
   <section class="post-content">{{ content }}</section>
 

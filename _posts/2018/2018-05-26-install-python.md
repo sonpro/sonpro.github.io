@@ -27,7 +27,7 @@ python3.6 버전을 설치하고 테스트를 하기위하여 BautifulSoup 라�
 python setup.py install
 ```
 
-### pip에서 다운로드
+### pip에서 다운로드gi
 pip(python package manager)를 통하여 실행
 
 ```python
@@ -36,10 +36,11 @@ pip3 install bs4
 
 #### 설치시 오류
 설치 후 아래와 같은 오류가 발생함
->You are trying to run the Python 2 version of Beautiful Soup under Python 3. This will not work.'<>'You need to convert the code.... blur blur
+>You are trying to run the Python 2 version of Beautiful Soup under Python 3. This will not work.''You need to convert the code.... blur blur
 
 [구글링해보니 이전에 beautifulsoup 설치시 python2.x버전용 library가 설치되어 있어서 발생하는 오류](https://stackoverflow.com/questions/31730053/python-3-4-installing-bs4-running-python2-not-python3)라고 함.
 기존 lib 파일 제거 후 재설치 필요
+
 
 **Let's make this easy on you (If your using a 3x version of Python)**
 
