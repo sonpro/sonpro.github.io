@@ -7,7 +7,7 @@ tags: "python mysql"
 
 ---
 
-#pymysql library를 사용하여 mysql server(docker container)연결
+# pymysql library를 사용하여 mysql server(docker container)연결
 
 **client** : eclipse + pydev + pymysql
 
