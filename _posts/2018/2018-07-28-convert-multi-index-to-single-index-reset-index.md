@@ -6,7 +6,7 @@ categories : python
 tags: dataframe index
 ---
 
-#Panas dataframe 의 index 변경하기
+# Panas dataframe 의 index 변경하기
 
 Pandas dataframe 자료구조는 index 와 column을 가진다
 
