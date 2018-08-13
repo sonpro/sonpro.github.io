@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "convert multi index to single index "reset_index""
+title: "convert multi index to single index  reset_index"
 date: "2018-07-28 15:36"
 categories : python
 tags: dataframe index
