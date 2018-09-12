@@ -1,3 +1,11 @@
+---
+layout: "post"
+title: "Markdown Syntax"
+date: "2018-09-13 08:01"
+categories: "dev"
+tag: markdown editor syntax
+---
+
 # Markdown syntax guide full version
 
 * [Overview](#overview)
