@@ -2,7 +2,7 @@
 layout: "post"
 title: "Markdown Syntax"
 date: "2018-09-13 08:01"
-categories: "dev"
+categories: "tips"
 tag: markdown editor syntax
 ---
 
